@@ -1,7 +1,7 @@
 name: Secure Workflow
 
 on:
-  pull_request_target:
+  pull_request:
     branches: main
 
 permissions: read-all
@@ -15,4 +15,4 @@ jobs:
       with:
         ref: ${{ github.event.pull_request.head.sha }}
     - name: Checking downloaded repo
-      run: ls -a
+      run: echo "Hi from modified workflow again"
